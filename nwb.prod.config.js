@@ -6,11 +6,13 @@ module.exports = {
         copy: [
             // Copy directory contents to output
             {from: './src/retail-shop-flat-icon_small.png'},
+            {from: './src/retail-shop-flat-icon_small.jpg'},
             {from: './src/retail-shop-flat-icon.jpg'},
             {from: './src/manifest.json'},
             {from: './src/sw.js'},
-            {from: './src/carouselSlide.css'},
-            {from: './src/darby_logo_wide.jpg'}
+            {from: './src/carousel.css'},
+            {from: './src/darby_logo_wide.jpg'},
+            {from: './src/logo3.png'}
         ],
         define: {
             'process.env.AUTH_DOMAIN': JSON.stringify(process.env.AUTH_DOMAIN),

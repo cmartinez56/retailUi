@@ -21,6 +21,7 @@
 .carousel.slide {
     width: 576px;
     margin-left: 10px;
+    display: flex;
 }
 
 .base-class {
@@ -43,6 +44,8 @@
 }
 
 .view-port {
+    text-align: center;
+    display: block;
     background-color: Ivory ;
     overflow:hidden;
     width: 100%;
@@ -82,12 +85,17 @@
 }
 
 @media (max-width: 675px) {
+    .carousel-caption {
+        padding-top:  2px;
+        padding-bottom: 2px;
+    }
+
     .base-class.Active {
-        height: 371px;
+        height: 220px;
     }
 
     .view-port img {
-        height: 371px;
+        height: 220px;
     }
 
     .carousel {
@@ -98,13 +106,14 @@
         min-height: 220px;
     }
     .carousel.slide {
-        width: 475px;
+        width: 95%;
+        height: 220px;
     }
 }
 
 @media (max-width: 450px) {
     .base-class.Active {
-        height: 138px;
+        height: 220px;
     }
 
     .carousel {

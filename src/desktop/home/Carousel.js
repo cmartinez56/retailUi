@@ -24,20 +24,23 @@ const CarouselComponent = ({siteCategories}) => {
                 {category && category.catalogList.map((catalog, index) => {
                     const mainClass = activeIndex === index ?
                         "base-class view-port Active" : "base-class view-port";
+                    const captionClass = activeIndex === index ?
+                        "carousel-caption Active" : "carousel-caption";
                     return (
-                        <div className={mainClass} key={catalog._id}>
-                            <img alt="" src={`https://api.netware.io/catalogApi/api/v1/catalog/file/${catalog.images[0].id}`} />
-                            <div className="carousel-caption ng-hide">
-                                <p style={{"fontFamily": "'Raleway', sans-serif", "fontSize": 22}}>
-                                    {catalog.shortDesc}
-                                </p>
+                            <div className={mainClass} key={catalog._id}>
+
+                                <img alt="" src={`https://api.netware.io/catalogApi/api/v1/catalog/file/${catalog.images[0].id}`} />
+                                <div className={captionClass}>
+                                    <p style={{"fontFamily": "'Raleway', sans-serif", "fontSize": 22}}>
+                                        {catalog.shortDesc}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
                     )
                 })}
             </div>
         </div>
     );
-}
+};
 
 export const Carousel = connectArray(CarouselComponent, [siteModel]);

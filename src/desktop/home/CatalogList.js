@@ -75,7 +75,11 @@ const useStyle = makeStyles({
         align: "center",
         color: "#1a8bdf",
         "text-align": "center",
-        marginTop: 20
+        marginTop: 20,
+        border: "#d2d0d5 solid 3px",
+        padding: 15,
+        margin: 10,
+        borderRadius: 15
     },
     container: {
         display: "flex",

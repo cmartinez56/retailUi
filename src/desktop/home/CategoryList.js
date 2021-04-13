@@ -12,10 +12,17 @@ export const CategoryListComponent = ({siteCategories})=> {
 
     return (
         <Fragment>
+            <Typography
+                variant="h5"
+                color="inherit"
+                className={classes.typography}
+            >
+                Categories
+            </Typography>
             <ul className={classes.container}>
             {siteCategories.filter((cate) => !cate.systemOnly).map((category)=> {
 
-                const preventDefault = (event) => event.preventDefault();
+                //const preventDefault = (event) => event.preventDefault();
 
                 // noinspection JSUnresolvedVariable
                 return (
@@ -71,6 +78,17 @@ export const CategoryList = connectArray(CategoryListComponent,
     [siteModel]);
 
 const useStyle = makeStyles({
+    typography: {
+        flexGrow: 1,
+        align: "center",
+        color: "#1a8bdf",
+        "text-align": "center",
+        marginTop: 20,
+        border: "#d2d0d5 solid 3px",
+        padding: 15,
+        margin: 10,
+        borderRadius: 15
+    },
     container: {
         display: "flex",
         "list-style": "none",
